@@ -1,0 +1,46 @@
+
+<div class="w3-container w3-content w3-padding-32" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Navi Mumbai, Maharashtra<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form  #f="ngForm" novalidate (ngSubmit)="save(f.value, f.valid)">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input name="name" id="name" class="w3-input w3-border" type="text" placeholder="Name" [(ngModel)]="user.name" #name="ngModel" required minlength="4">
+              <small [hidden]="name.valid || (name.pristine && !f.submitted)" class="text-danger">
+                Name is required (minimum 4 characters).
+                </small>
+            </div>
+            <div class="w3-half">
+              <input name="email" id="email" class="w3-input w3-border" type="text" placeholder="Email" [(ngModel)]="user.email" #email="ngModel" required>
+              <small [hidden]="email.valid || (email.pristine && !f.submitted)" class="text-danger">
+                Email is required.
+                </small>
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input name="mobile" id="mobile" class="w3-input w3-border" type="text" placeholder="Mobile No." [(ngModel)]="user.mobile" #mobile="ngModel" required>
+              <small [hidden]="mobile.valid || (mobile.pristine && !f.submitted)" class="text-danger">
+                Mobile Number is required.
+                </small>
+            </div>
+            <div class="w3-half">
+              <input name="designation" id="designation" class="w3-input w3-border" type="text" placeholder="Designation" [(ngModel)]="user.designation" #designation="ngModel">
+             
+            </div>
+          </div>
+          <input name="location" id="location" class="w3-input w3-border" type="text" placeholder="Location" [(ngModel)]="user.location" #location="ngModel"><br/>
+          <textarea name="remarks" id="remarks" rows="4" cols="50" class="w3-input w3-border" type="text" placeholder="Message" [(ngModel)]="user.remarks" #remarks="ngModel"></textarea>
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+<div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9529873863644!2d73.02713121421326!3d19.109718255879176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0fa95ff1789%3A0xed94f90522f1346b!2sLTI%20(L%26T%20Infotech)!5e0!3m2!1sen!2sin!4v1600423449445!5m2!1sen!2sin" width=100%  height="250" frameborder="0" 
+style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
